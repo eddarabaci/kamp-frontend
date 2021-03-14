@@ -1,0 +1,23 @@
+<div *ngIf = "dataLoaded == false" class = "spinner-border text-success" role = "status">
+    <span class="visually-hidden" >Loading...</span>
+</div>
+<table class = "table">
+    <thead class="alert alert-success" role="alert">
+        <tr>
+            <th>Id</th>
+            <th>Marka</th>
+            <th>Renk</th>
+            <th>Model Yılı</th>
+            <th>Açıklama</th>
+            <th>Günlük Fiyatı</th>
+        </tr>
+    </thead>
+    <tr *ngFor = "let car of cars">
+        <td>{{car.id}}</td>
+        <td>{{car.brandName}}</td>
+        <td>{{car.colorName}}</td>
+        <td>{{car.modelYear}}</td>
+        <td>{{car.descriptions}}</td>
+        <td>{{car.dailyPrice}} &#x20BA;</td>
+    </tr>
+</table>
